@@ -26,6 +26,7 @@ public class SearchData {
 	private Scanner scannerDate1;
 	private Scanner scannerDate2;
 
+
 	public void setFirstDataDatePublication(int dataDatePublication) {
 		this.dataFirstDatePublication = dataDatePublication;
 
@@ -53,7 +54,7 @@ public class SearchData {
 		scannerTitle = new Scanner(System.in);
 		String input = scannerTitle.nextLine();
 		this.dataTitles = input;
-
+System.out.println(input);
 		scannerTitle.close();
 	}
 
@@ -76,27 +77,31 @@ public class SearchData {
 	 */
 	public void searchDatePublication() {
 		System.out.println("Give the period of publication of the book you are looking for (two dates)");
+		
 		System.out.println("Give the first date");
+		
 		scannerDate1 = new Scanner(System.in);
+		int input1 = scannerDate1.nextInt();
+		
+		if (input1 <= 0) {
+			throw new NumberFormatException("Your date of publication must be strictly ypositive");
+
+		}	
+		this.setFirstDataDatePublication(input1);
+
+	
 		System.out.println("Give the second date");
 		scannerDate2 = new Scanner(System.in);
-
-		int input1 = scannerDate1.nextInt();
 		int input2 = scannerDate2.nextInt();
+
+		if (input2 <= 0) {
+			throw new NumberFormatException("Your date of publication must be strictly positive");
+
+		}
+
+		this.setSecondDataDatePublication(input2);
 		scannerDate1.close();
 		scannerDate2.close();
-
-		if (input1 <= 0) {
-			throw new NumberFormatException("Your date of publication must be positive");
-
-		}
-		if (input2 <= 0) {
-			throw new NumberFormatException("Your date of publication must be positive");
-
-		}
-
-		this.setFirstDataDatePublication(input1);
-		this.setSecondDataDatePublication(input2);
-
+		
 	}
 }
