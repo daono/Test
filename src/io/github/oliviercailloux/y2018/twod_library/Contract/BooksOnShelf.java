@@ -1,4 +1,4 @@
-package io.github.oliviercailloux.twod_library.Contract;
+package io.github.oliviercailloux.y2018.twod_library.Contract;
 import java.awt.List;
 public class BooksOnShelf {
 	/**
