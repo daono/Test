@@ -10,8 +10,6 @@ import java.util.Scanner;
  * the book's title that has been searched
  * the book's author that has been searched
  * the book's publications dates that have been searched.
- * 
- *
  *
  * @author CatherineCAROU & daono
  * @version 2
