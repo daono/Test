@@ -1,5 +1,12 @@
 package io.github.oliviercailloux.y2018.twod_library.Contract;
-
+/**
+ * nbOfPages not null
+ * author not null
+ * 
+ * 
+ * @author Julia
+ *
+ */
 public class Book {
 
 
